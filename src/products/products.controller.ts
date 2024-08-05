@@ -31,9 +31,7 @@ export class ProductsController {
   }
 
   // @Patch(':id')
-  @MessagePattern({cmd: 'update_product'})
-
-  
+  @MessagePattern({cmd: 'update_product'})  
   // update(@Param('id', ParseIntPipe) id: number, @Body() updateProductDto: UpdateProductDto) {
     update(@Payload() updateProductDto: UpdateProductDto) {
     // return this.productsService.update(id, updateProductDto);
